@@ -1,18 +1,32 @@
+/*Применяем кастомную переменную*/
+:root {
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --accent-color: #2196f3;
+  --logo-color: #2196f3;
+  --second-accent-color: #ffffff;
+  --background-color: #f5f4fa;
+  --fotter-link-color: rgba(255, 255, 255, 0.6);
+  --secondary-backround-color: #2f303a;
+}
+/*для тела и ссылок*/
 body,
 a {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-size: 14px;
-  color: #212121;
+  color: var(--primary-text-color);
 }
+/*убираем подчеркивание ссылок*/
 a {
   text-decoration: none;
 }
+/*Убираем точки элементов списка*/
 ul {
   list-style: none;
 }
+/*Логотип*/
 .logo {
-  color: #2196f3;
+  color: var(--accent-color);
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 26px;
@@ -27,16 +41,20 @@ ul {
 .header-nav {
   font-weight: 500;
 }
-.header-nav a:hover {
+.header-nav a:hover,
+.header-nav a:focus {
   color: #2196f3;
 }
 .contacts a {
   color: #757575;
   font-weight: 500;
 }
-.contacts a:hover {
+.contacts a:hover,
+.contacts a:focus {
   color: #2196f3;
 }
+
+/*Наш Герой*/
 .hero {
   height: 600px;
   background: #2f303a;
@@ -47,13 +65,14 @@ ul {
   text-align: center;
   text-transform: uppercase;
 }
-.container {
+.hero-title {
   color: white;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
+/*Кнопка Заказать услугу*/
 .order {
   width: 200px;
   height: 50px;
@@ -61,24 +80,35 @@ ul {
   background: #2196f3;
   border: none;
 }
-.features h3 {
+.advantages-title,
+.occupation-title,
+.group-title,
+.portfolio-title,
+.advantages h3 {
   font-weight: bold;
   text-transform: uppercase;
-}
-.features p {
-  color: #757575;
 }
 h2 {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.principles h2 {
+.item-link p,
+.employee-card p,
+.features-list p,
+.advantages p {
+  color: var(--secondary-text-color);
+}
+/*Прячем псевдо заголовки*/
+.occupation-title,
+.portfolio-title {
   display: none;
 }
+/*Добро пожаловать в подвал*/
 .footer {
   background-color: #2f303a;
   color: #ffffff;
+  font-family: Raleway;
   font-style: normal;
   font-size: 14;
   line-height: 1.7;
@@ -90,4 +120,8 @@ h2 {
 .filter-button button:hover {
   background-color: #2196f3;
   color: #ffffff;
+}
+/*Переназначаем стиль тега адрес*/
+.address {
+  font-style: normal;
 }
